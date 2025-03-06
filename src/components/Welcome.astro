@@ -4,16 +4,26 @@ import RSVPForm from './RSVPForm.astro';
 ---
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main style="display:flex; flex-direction: column; width: 100%">
+	<main style="display:flex; flex-direction: column; width: 100%; height: 80%">
 		<section id="hero">
 			<h1>
 				Cesar & Cinthya
 			</h1>
-			<h2>Save the Date: 22 - Julio - 2025</h2>
+			<p class="acknowledgement">El destino nos cruzó, el amor nos unió, y ahora estamos listos para comenzar un nuevo capítulo juntos. Queremos compartir con ustedes este día tan especial, donde nuestros caminos se entrelazan para siempre.</p>
+			<p class="details">
+				<span> Julio | 2:00 PM</span><br />
+				<span>Parque los llorones</span><br />
+				<span>Av. Los Llorones, Campestre del Bosque, 31415 Chihuahua, Chih.</span><br />
+				<span>Vestimenta Semiformal</span><br />
+				<span>Evento libre de niños </span><br />
+			</p>
 		</section>
-		<RSVPForm />
+		<section id="footer">
+			<p>Su compañía es lo más valioso para nosotros. Si desean hacernos un obsequio, agradeceremos que sea en efectivo para ayudarnos a dar los primeros pasos en esta nueva etapa.</p>
+			<p>Cuenta | 0000000000000000</p>
+		</section>
 	</main>
+	<RSVPForm />
 </div>
 
 <style>
@@ -30,21 +40,36 @@ import RSVPForm from './RSVPForm.astro';
 	#container {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 		height: 100%;
+		background-color: lightpink;
 	}
 
 	main {
-		height: 100%;
+		min-height: 90%;
 		display: flex;
 		justify-content: center;
 	}
 
 	#hero {
 		display: flex;
-		align-items: start;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		padding: 16px;
+		width: 70%;
+		margin: 0 auto;
 	}
+
+	#hero h1 {
+		text-align: center;
+	}
+
+	#hero .acknowledgement {
+		text-align: justify;
+	}
+
+	#hero .details {
+		text-align: center;
+	}
+
 
 	h1 {
 		font-size: 22px;
@@ -71,6 +96,12 @@ import RSVPForm from './RSVPForm.astro';
 		background: rgba(255, 255, 255, 1);
 		border-radius: 16px;
 		border: 1px solid white;
+	}
+
+	#footer {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: auto;
 	}
 
 
