@@ -1,16 +1,18 @@
 ---
 import background from '../assets/background.svg';
+import RSVPForm from './RSVPForm.astro';
 ---
 
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
+	<main style="display:flex; flex-direction: column; width: 100%">
 		<section id="hero">
 			<h1>
 				Cesar & Cinthya
 			</h1>
 			<h2>Save the Date: 22 - Julio - 2025</h2>
 		</section>
+		<RSVPForm />
 	</main>
 </div>
 
