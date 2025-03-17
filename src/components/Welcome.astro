@@ -1,16 +1,16 @@
 ---
+import Names from './Names.astro';
 import RSVPForm from './RSVPForm.astro';
+import Flowers from './Flowers.astro';
+import Acknowledgement from './Acknowledgement.astro';
 ---
 
 <div id="container">
-	<img src="flor_1.webp" class="top-flower" />
-	<img src="hojas.svg" class="leaves" />
+	<Flowers />
 	<main>
 		<section id="hero">
-			<h1>
-				<span>Cinthya</span>&<span>Cesar</span>
-			</h1>
-			<p class="acknowledgement">El destino nos cruzó, el amor nos unió, y ahora estamos listos para comenzar un nuevo capítulo juntos. Queremos compartir con ustedes este día tan especial, donde nuestros caminos se entrelazan para siempre.</p>
+			<Names />
+			<Acknowledgement />
 			<p class="details">
 				<span> Julio | 2:00 PM</span><br />
 				<span>Parque los llorones</span><br />
@@ -33,22 +33,6 @@ import RSVPForm from './RSVPForm.astro';
 		background-color: #f2ddde;
 	}
 
-	.top-flower {
-		position: absolute;
-		width: 80vw;
-		height: 78vw;
-		rotate: -91.8deg;
-		transform: translate(37%, -50%);
-	}
-
-	.leaves {
-		position: absolute;
-		width: 15vw;
-		rotate: -126.4deg;
-		left: 70vw;
-		top: 43vw;
-	}
-
 	main {
 		z-index: 1;
 		display: flex;
@@ -68,37 +52,8 @@ import RSVPForm from './RSVPForm.astro';
 		gap: 50px;
 	}
 
-	#hero h1 {
-		text-align: center;
-		font-family: "WindSong", cursive;
-		font-size: 17vw;
-		align-self: flex-end;
-		line-height: 1;
-		color: #8b3a40;
-		font-weight: 100;
-	}
-	
-	#hero h1 span {
-		display: block;
-		color: #c39798;
-		rotate: -6.7deg;
-	}
-
-	#hero .acknowledgement {
-		font-family: "Quintessential", serif;
-		text-align: justify;
-		letter-spacing: 2px;
-		color: #8b3a40
-	}
-
 	#hero .details {
 		text-align: center;
-	}
-
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
 	}
 
 	h2 {
@@ -134,10 +89,6 @@ import RSVPForm from './RSVPForm.astro';
 		#container {
 			display: flex;
 			flex-direction: column;
-		}
-
-		h1 {
-			line-height: 1.5;
 		}
 	}
 </style>
