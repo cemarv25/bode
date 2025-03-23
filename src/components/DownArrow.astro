@@ -1,0 +1,21 @@
+<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="10vw" viewBox="0 -960 960 960" width="10vw" fill="#8B3A40">
+    <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+</svg>
+
+<style>
+    .arrow-down {
+        opacity: 0;
+        animation: fadeInUp 3s forwards 1.5s, MoveUpDown 3s ease-in-out infinite;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    @keyframes MoveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+</style>

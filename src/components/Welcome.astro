@@ -3,6 +3,8 @@ import Names from './Names.astro';
 import RSVPForm from './RSVPForm.astro';
 import Flowers from './Flowers.astro';
 import Acknowledgement from './Acknowledgement.astro';
+import Details from './Details.astro';
+import GiftMessage from './GiftMessage.astro';
 ---
 
 <div id="container">
@@ -11,17 +13,10 @@ import Acknowledgement from './Acknowledgement.astro';
 		<section id="hero">
 			<Names />
 			<Acknowledgement />
-			<p class="details">
-				<span> Julio | 2:00 PM</span><br />
-				<span>Parque los llorones</span><br />
-				<span>Av. Los Llorones, Campestre del Bosque, 31415 Chihuahua, Chih.</span><br />
-				<span>Vestimenta Semiformal</span><br />
-				<span>Evento libre de niños </span><br />
-			</p>
+			<Details />
 		</section>
 		<section id="footer">
-			<p>Su compañía es lo más valioso para nosotros. Si desean hacernos un obsequio, agradeceremos que sea en efectivo para ayudarnos a dar los primeros pasos en esta nueva etapa.</p>
-			<p>Cuenta | 0000000000000000</p>
+			<GiftMessage />
 		</section>
 	</main>
 	<RSVPForm />
@@ -30,7 +25,7 @@ import Acknowledgement from './Acknowledgement.astro';
 <style>
 	#container {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		background-color: #f2ddde;
+		background: linear-gradient(180deg, rgba(242,221,222,1) 0%, rgba(255,255,255,1) 100%);;
 	}
 
 	main {
@@ -47,41 +42,14 @@ import Acknowledgement from './Acknowledgement.astro';
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		width: 80%;
+		width: 85%;
 		margin: 0 auto;
-		gap: 50px;
-	}
-
-	#hero .details {
-		text-align: center;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
+		gap: 8vh;
 	}
 
 	#footer {
 		width: 90%;
-		margin: 0 auto;
-		margin-top: auto;
+		margin: 64px auto;
 	}
 
 

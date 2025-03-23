@@ -1,21 +1,43 @@
+---
+const ONE_DAY = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
+const bodeDate = new Date('July 26, 2025');
+const now = new Date();
+
+const diffDays = Math.round(Math.abs((bodeDate.getTime() - now.getTime()) / ONE_DAY)) + 1;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Quintessential&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>C & C | Faltan {diffDays} dias</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+
+<script>
+	const inViewport: IntersectionObserverCallback = (entries, observer) => {
+		entries.forEach(entry => {
+			entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+		});
+	};
+
+	const observer = new IntersectionObserver(inViewport);
+
+	document.querySelectorAll('[data-inviewport]').forEach(el => {
+  		observer.observe(el);
+	});
+</script>
 
 <style>
 	html,

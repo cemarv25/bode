@@ -1,0 +1,45 @@
+---
+import DownArrow from "./DownArrow.astro";
+import Address from './Address.astro';
+---
+
+<div class="details">
+    <p class="date">26 Julio | 2:00 PM</p><br />
+    <DownArrow /><br />
+    <Address />
+    <p class="dress-code" data-inviewport="fadeInUp">Vestimenta | Semiformal</p>
+    <p class="kid-disclaimer" data-inviewport="fadeInUp">Evento libre de niños </p><br />
+</div>
+
+<style>
+    .details {
+        text-align: center;
+        font-family: "Quintessential", serif;
+    }
+
+    .date {
+        font-size: 8vw;
+        color: #828071;
+        margin: 0;
+        animation: fadeInUp 3s forwards 1.5s;
+        opacity: 0;
+    }
+    
+    .dress-code {
+        font-size: 8vw;
+        color: #828071;
+        margin: 0;
+        opacity: 0;
+    }
+
+    .kid-disclaimer {
+        font-size: 5vw;
+        color: #8B3A40;
+        margin: 0;
+        opacity: 0;
+    }
+
+    [data-inviewport="fadeInUp"].is-inViewport { 
+		animation: fadeInUp 1s forwards;
+	}
+</style>
