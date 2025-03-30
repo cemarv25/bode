@@ -37,6 +37,20 @@ const diffDays = Math.round(Math.abs((bodeDate.getTime() - now.getTime()) / ONE_
 	document.querySelectorAll('[data-inviewport]').forEach(el => {
   		observer.observe(el);
 	});
+
+	const ONE_DAY = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
+    const bodeDate = new Date('July 26, 2025');
+
+    function updateDaysRemaining() {
+        const now = new Date();
+        const diffDays = Math.round(Math.abs((bodeDate.getTime() - now.getTime()) / ONE_DAY)) + 1;
+		if (document) {
+			document.title = `C & C | Faltan ${diffDays} dias`;
+		}
+    }
+
+    // Update the title dynamically on page load
+    updateDaysRemaining();
 </script>
 
 <style>
